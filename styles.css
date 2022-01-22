@@ -7,16 +7,20 @@
 }
 :root{
     --primary-color: #059669;
+    --rgba-primary-color-hover: 5, 150, 105, 0.1;
     --secondary-color: white;
 
     --black: #000000;
     --white: white;
     --grey-subtle: #F2F2F2;
     --grey-secondary: #757575;
+
+    --rgba-box-shadow: 0, 0, 0, 0.1;
+    --description-text: #757575;
 }
 
 body{
-    background: var(--grey-subtle);
+    background: #AAAAAA;
     padding: 2rem;
     font-family: 'Open Sans', sans-serif;
 }
@@ -30,6 +34,20 @@ body{
 .comp-lib-h2 {
     margin: 1rem;
 }
+
+/* Common CSS Starts */
+.button-inherit-parent {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+/* Common CSS Ends */
+
+
 
 
 /*  Avatar Component Starts */
@@ -158,7 +176,7 @@ body{
     position: relative;
 
     border-radius: 0.25rem;
-    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 1px 1px rgba(var(--rgba-box-shadow));
 }
 
 .card__content {
@@ -240,7 +258,7 @@ body{
     position: relative;
 
     border-radius: 0.25rem;
-    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 1px 1px rgba(var(--rgba-box-shadow));
 }
 
 .card-txt-overlay__img {
@@ -293,7 +311,7 @@ body{
     position: relative;
 
     border-radius: 0.25rem;
-    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 1px 1px rgba(var(--rgba-box-shadow));
 }
 
 .card-txt__content {
@@ -324,7 +342,7 @@ body{
 
 
 
-/*  Chip Component */
+/*  Chip Component with Flex */
 .chip-holder {
     display: flex;
     flex-direction: row;
@@ -350,8 +368,40 @@ body{
     color: var(--white);
     text-align: center;
 }
-/*  Chip Component Ends */
+/*  Chip Component Ends with Flex */
 
+
+
+/*  Chip Component with Grid */
+.chip-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    height: 15rem;
+    background: var(--grey-subtle);
+    position: relative;
+
+    border-radius: 0.25rem;
+    box-shadow: 2px 2px 2px 1px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.chip-holder__chip {
+    min-width: 10rem;
+    min-height: 3rem;
+    padding: 1rem;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    background: var(--primary-color);
+    border-radius: 50px;
+    color: var(--white);
+    text-align: center;
+}
+
+@media only screen and (max-width: 1212px) {
+    .chip-holder {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+/*  Chip Component Ends with Grid */
 
 
 
@@ -455,7 +505,12 @@ body{
     background-color: var(--grey-secondary);
     display: flex;
     align-items: center;
+    
+    /* Uncomment to Enable them to fix snack bar */
 
+    /* position: fixed;
+    bottom: 30px;
+    left: 30px; */
 }
 
 .snackbar__message {
@@ -487,3 +542,184 @@ body{
 
 /*  Snackbar Component Ends */
 
+
+
+/*  Dialogue Component Starts */
+
+.dialogue {
+    width: 20rem;
+    height: 15rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 1px 0px 0px rgba(var(--rgba-box-shadow));
+    background-color: var(--white);
+    
+    display: grid;
+    grid-template-columns: "1fr 1fr 1fr";
+
+}
+
+.dialogue__title {
+    grid-area: title;
+    /* background-color: red; */
+    padding: 1rem;
+    height: 2rem;
+}
+
+.dialogue__supporting-text {
+    grid-area: supportingText;
+    padding: 1rem;
+    color: var(--description-text);
+
+}
+
+.dialogue__action-btn {
+    width: auto;
+    border-radius: 8px;
+    margin: 6px;
+    color: var(--primary-color);
+    text-align: center;
+}
+.dialogue__action-btn:hover {
+    background-color:rgba(var(--rgba-primary-color-hover));
+}
+
+.dialogue__action-btn__primary {
+    grid-area: actionBtnPrimary;
+}
+
+.dialogue__action-btn__secondary {
+    grid-area: actionBtnSecondary;
+}
+
+/*  Dialogue Component Starts -- with Title with Buttons Side-By-Side  */
+.dialogue--title-buttons-side-by-side {
+    grid-template-areas: 'title          title            title'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         '.....          actionBtnPrimary actionBtnSecondary';
+}
+/*  Dialogue Component Ends -- with Buttons Stacked with Buttons Side-By-Side  */
+
+
+/*  Dialogue Component Starts -- with Title with Buttons Stacked */
+.dialogue--buttons-stacked {
+    grid-template-areas: 'title          title            title'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         '.....          .....            actionBtnPrimary'
+                         '.....          .....            actionBtnSecondary';
+
+}
+
+.dialogue__action-btn--stacked {
+    text-align: left;
+    padding-left: 1rem;
+}
+/*  Dialogue Component Ends -- with Title with Buttons Stacked */
+
+
+/*  Dialogue Component Starts -- without Title with Buttons Side-By-Side */
+.dialogue--no-title-buttons-side-by-side {
+    grid-template-areas: 'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         '.....          actionBtnPrimary actionBtnSecondary';
+}
+
+.dialogue__title--none {
+    display: none;
+}
+/*  Dialogue Component Ends -- with Buttons Stacked with Buttons Side-By-Side */
+
+
+/*  Dialogue Component Starts -- without Title with Buttons Stacked */
+.dialogue--no-title-buttons-stacked {
+    grid-template-areas: 'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         '.....          .....            actionBtnPrimary'
+                         '.....          .....            actionBtnSecondary';
+}
+
+.dialogue__title--none {
+    display: none;
+}
+
+.dialogue__action-btn--stacked {
+    text-align: left;
+    padding-left: 1rem;
+}
+/*  Dialogue Component Ends -- with Buttons Stacked with Buttons Stacked */
+
+
+/*  Dialogue Component Ends */
+
+
+
+
+/*  Tabs Component Starts */
+
+.tab-bar {
+    display: inline-flex;
+    background: var(--white);
+    height: auto;
+}
+
+.tab-bar__tab {
+    width: 10rem;
+    height: auto;
+    min-height: 3rem;
+
+    border-bottom: 3px solid var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tab-bar__tab:hover {
+    background: rgba(var(--rgba-primary-color-hover));
+}
+.tab-bar__tab--focus {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.tab-bar__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-bar__title {
+    width: auto;
+    height: auto;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*  Tabs Component Starts -- with Text*/
+.tab-bar__icon--none {
+    display: none;
+}
+/*  Tabs Component Ends -- with Text*/
+
+/*  Tabs Component Starts -- with Text and Icon side-by-side*/
+.tab-bar__icon--none {
+}
+/*  Tabs Component Ends -- with Text and Icon side-by-side*/
+
+/*  Tabs Component Starts -- with Text and Icon Stacked*/
+.tab-bar__tab--icon-text-stacked {
+    flex-direction: column;
+}
+/*  Tabs Component Ends -- with Text and Icon Stacked*/
+
+/*  Tabs Component Ends */

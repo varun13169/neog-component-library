@@ -164,45 +164,48 @@ body{
 
 
 
+
 /*  Card Component Starts */
-/* .card{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
+.card{
+    display: grid;
     width: 20rem;
-    height: 10rem;
+    height: auto;
     background: var(--white);
-    position: relative;
-
     border-radius: 0.25rem;
-    box-shadow: 1px 2px 1px 1px rgba(var(--rgba-box-shadow));
-}
+    overflow: hidden;
 
-.card__content {
-    display: flex;
-    flex-grow: 1;
-}
-.card__content:hover {
-    background-color:var(--grey-subtle);
 }
 
 .card__img {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 0.25rem 0rem 0rem 0rem;
+    grid-area: cardImg;
+    width: 6rem;
+    height: 6rem;
 }
 
 .card__info {
-    flex-grow: 1;
-    margin-right: auto;
-    padding: 1rem 1rem;
+    grid-area: cardInfo;
+}
+
+.card__actions {
+    grid-area: cardActions;
+}
+
+.card__info {
+    padding: 0.5rem 0.25rem 0.25rem 0.25rem;
 }
 .card__primary-text{
+    font-size: 1.25rem;
     color: var(--black);
 }
 .card__secondary-text{
     color: var(--grey-secondary);
+}
+
+.card__description {
+    grid-area: cardDesc;
+    padding: 0.25rem;
+    color: var(--grey-secondary);
+    /* display: none; */
 }
 
 .card__actions {
@@ -211,132 +214,92 @@ body{
     min-height: 2rem;
     padding: 0.5rem;
     align-items: center;
+
 }
 
 .card__button {
-    background-color: var(--white);
-    border: none;
-    text-decoration: none;
-    display: inline-block;
     color: var(--primary-color);
     padding: 0.5rem;
 }
 
 .card__icons {
     margin-left: auto;
-} */
+}
+.card__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
 
-    /* Card with Badge Starts */
-    /* .card .badge {
-        position: absolute;
-        top: -1rem;
-        right: -1rem;
-    } */
-    /* Card with Badge Ends */
+/*  Card Component Starts -- Basic */
+.card-basic {
+    grid-template-areas: 'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+.card__img--basic {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/*  Card Component Ends -- Basic */
+
+/*  Card Component Starts -- Basic with Text over Media */
+.card-basic-text-over-media {
+    grid-template-areas: 'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+.card__img--basic-text-over-media {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.card__info--basic-text-over-media {
+    grid-area: cardImg-start / cardImg-start / cardImg-end / cardImg-end;
+    margin-top: auto;
+}
+/*  Card Component Ends -- Basic with Text over Media */
 
 
-    /* Card with Dismiss Starts */
-    /* .card__actions--dismiss {
-        margin-left: auto;
+/*  Card Component Starts -- Basic with Header */
+.card-basic-text-header {
+    grid-template-areas: 'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+.card__img--basic-text-over-media {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.card__info--basic-text-header {
+    grid-area: cardInfo;
+    margin-top: auto;
+}
 
-    } */
-    /* Card with Dismiss Ends */
+/*  Card Component Ends -- Basic with Header */
 
+
+
+/*  Card Component Starts -- Horizontal Image and Text */
+.card-img-text-side-by-side {
+    grid-template-areas: 'cardImg     cardImg     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardImg     cardImg     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardImg     cardImg     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+
+.card__description-none {
+    display: none;
+}
+/*  Card Component Ends -- Horizontal Image and Text */
 /*  Card Component Ends */
-
-
-
-
-/*  Card Component with Text Overlay Starts */
-.card-txt-overlay{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
-    width: 20rem;
-    height: 10rem;
-    position: relative;
-
-    border-radius: 0.25rem;
-    box-shadow: 1px 2px 1px 1px rgba(var(--rgba-box-shadow));
-}
-
-.card-txt-overlay__img {
-    width: 20rem;
-    height: 10rem;
-    border-radius: 0.25rem;
-
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-
-.card-txt-overlay__content {
-    display: flex;
-    flex-grow: 1;
-}
-.card-txt-overlay__content:hover {
-    background-color:var(--grey-subtle);
-    opacity: 0.25;
-}
-
-.card-txt-overlay__info {
-    flex-grow: 1;
-    margin-right: auto;
-    padding: 1rem 1rem;
-}
-.card-txt-overlay__primary-text{
-    color: var(--black);
-}
-.card-txt-overlay__secondary-text{
-    color: var(--grey-secondary);
-}
-/*  Card Component with Text Overlay Ends */
-
-
-
-
-
-
-
-/*  Card Component with Text Starts */
-.card-txt {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
-    width: 20rem;
-    height: 10rem;
-    background: var(--white);
-    position: relative;
-
-    border-radius: 0.25rem;
-    box-shadow: 1px 2px 1px 1px rgba(var(--rgba-box-shadow));
-}
-
-.card-txt__content {
-    display: flex;
-    flex-grow: 1;
-}
-.card-txt__content:hover {
-    background-color:var(--grey-subtle);
-    opacity: 0.25;
-}
-
-.card-txt__info {
-    flex-grow: 1;
-    margin-right: auto;
-    padding: 1rem 1rem;
-}
-.card-txt__primary-text{
-    color: var(--black);
-}
-.card-txt__secondary-text{
-    color: var(--grey-secondary);
-}
-/*  Card Component with Text Ends */
-
-
 
 
 
@@ -734,158 +697,3 @@ body{
 
 
 
-/*  Card Component Starts */
-.card{
-    display: grid;
-    width: 20rem;
-    height: auto;
-    background: var(--white);
-    border-radius: 0.25rem;
-    overflow: hidden;
-
-}
-
-.card__img {
-    grid-area: cardImg;
-    width: 6rem;
-    height: 6rem;
-}
-
-.card__info {
-    grid-area: cardInfo;
-}
-
-.card__actions {
-    grid-area: cardActions;
-}
-
-.card__info {
-    padding: 0.5rem 0.25rem 0.25rem 0.25rem;
-}
-.card__primary-text{
-    font-size: 1.25rem;
-    color: var(--black);
-}
-.card__secondary-text{
-    color: var(--grey-secondary);
-}
-
-.card__description {
-    grid-area: cardDesc;
-    padding: 0.25rem;
-    color: var(--grey-secondary);
-    /* display: none; */
-}
-
-.card__actions {
-    display: flex;
-
-    min-height: 2rem;
-    padding: 0.5rem;
-    align-items: center;
-
-}
-
-.card__button {
-    color: var(--primary-color);
-    padding: 0.5rem;
-}
-
-.card__icons {
-    margin-left: auto;
-}
-.card__icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 1rem;
-}
-
-/*  Card Component Starts -- Basic */
-.card-basic {
-    grid-template-areas: 'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
-                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
-                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
-                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
-                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
-                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
-                         'cardActions cardActions cardActions cardActions cardActions cardActions';
-}
-.card__img--basic {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-/*  Card Component Ends -- Basic */
-
-/*  Card Component Starts -- Basic with Text over Media */
-.card-basic-text-over-media {
-    grid-template-areas: 'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
-                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
-                         'cardActions cardActions cardActions cardActions cardActions cardActions';
-}
-.card__img--basic-text-over-media {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.card__info--basic-text-over-media {
-    grid-area: cardImg-start / cardImg-start / cardImg-end / cardImg-end;
-    margin-top: auto;
-}
-/*  Card Component Ends -- Basic with Text over Media */
-
-
-/*  Card Component Starts -- Basic with Header */
-.card-basic-text-header {
-    grid-template-areas: 'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
-                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
-                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
-                         'cardActions cardActions cardActions cardActions cardActions cardActions';
-}
-.card__img--basic-text-over-media {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.card__info--basic-text-header {
-    grid-area: cardInfo;
-    margin-top: auto;
-}
-
-/*  Card Component Ends -- Basic with Header */
-
-
-
-/*  Card Component Starts -- Horizontal Image and Text */
-.card-img-text-side-by-side {
-    grid-template-areas: 'cardImg     cardImg     cardInfo    cardInfo    cardInfo    cardInfo'
-                         'cardImg     cardImg     cardInfo    cardInfo    cardInfo    cardInfo'
-                         'cardImg     cardImg     cardInfo    cardInfo    cardInfo    cardInfo'
-                         'cardActions cardActions cardActions cardActions cardActions cardActions';
-}
-
-.card__description-none {
-    display: none;
-}
-/*  Card Component Ends -- Horizontal Image and Text */
-
-
-
-
-    /* Card with Badge Starts */
-    /* .card .badge {
-        position: absolute;
-        top: -1rem;
-        right: -1rem;
-    } */
-    /* Card with Badge Ends */
-
-
-    /* Card with Dismiss Starts */
-    /* .card__actions--dismiss {
-        margin-left: auto;
-
-    } */
-    /* Card with Dismiss Ends */
-
-/*  Card Component Ends */

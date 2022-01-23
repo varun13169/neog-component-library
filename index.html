@@ -96,149 +96,152 @@
     
     
     
-    
     <!-- Card Component Starts -->
     <h1 class="comp-lib-h1">@ Card Component</h1>
 
     <!-- Card Component Description -->
 
-    <h2 class="comp-lib-h2">Card Regular</h2>
-    <!-- Card Component Regular -->
-    <div class="card">
-        <div class="card__content">
-            <img class="card__img" 
-            src="https://media.istockphoto.com/photos/aerial-view-of-misty-mountains-at-sunrise-picture-id1195458582?k=20&m=1195458582&s=612x612&w=0&h=gzpAJTwppTIEAhNbUaHnjuRQoYon0F4C87UQ3xXv1oU="/>
+    <h2 class="comp-lib-h2">Card Component Basic</h2>
+    <!-- Card Component Starts -- Basic -->
+    <div class="card card-basic">
+        <img class="card__img card__img--basic"
+            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
 
-            <div class="card__info">
-                <h2 class="card__primary-text">Mountains Hill Top</h2>
-                <h3 class="card__secondary-text">Author Name</h3>
-            </div>
+        <div class="card__info">
+            <h2 class="card__primary-text">Mountains Hill Top</h2>
+            <h3 class="card__secondary-text">Author Name</h3>
         </div>
 
+        <div class="card__description">
+            <p>Visit ten places on our planet that are undergoing the biggest changes today.</p>
+        </div>
 
         <div class="card__actions">
             <div class="card__buttons">
-                <button class="card__button">READ</button>
-                <button class="card__button">BOOKMARK</button>
+                <button class="card__button button-inherit-parent">READ</button>
+                <button class="card__button button-inherit-parent">BOOKMARK</button>
             </div>
 
 
             <!-- Inset Icons base on need -->
-            <!-- <div class="card__icons">
-                <button class="card__button">READ</button>
-                <button class="card__button">BOOKMARK</button>
-            </div> -->
+            <div class="card__icons">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+            </div>
+
         </div>
     </div>
-    <!-- Card Component Regular Ends -->
+    <!-- Card Component Ends -- Basic -->
 
 
-    <h2 class="comp-lib-h2">Card with Badge</h2>
-    <!-- Card Component with Badge Start -->
-    <div class="card">
+    <h2 class="comp-lib-h2">Card Component Basic with Text over Media</h2>
+    <!-- Card Component Starts -- Basic with Text over Media -->
+    <div class="card card-basic-text-over-media">
+        <img class="card__img card__img--basic-text-over-media"
+            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
 
-        <div class="badge">
-            <img class="badge__content" src="/flaticons/chat-white.png" alt="Image">
-            </img>
+        <div class="card__info card__info--basic-text-over-media">
+            <h2 class="card__primary-text">Mountains Hill Top</h2>
+            <h3 class="card__secondary-text">Author Name</h3>
         </div>
 
-        <div class="card__content">
-            <img class="card__img" 
-            src="https://media.istockphoto.com/photos/aerial-view-of-misty-mountains-at-sunrise-picture-id1195458582?k=20&m=1195458582&s=612x612&w=0&h=gzpAJTwppTIEAhNbUaHnjuRQoYon0F4C87UQ3xXv1oU="/>
-
-            <div class="card__info">
-                <h2 class="card__primary-text">Mountains Hill Top</h2>
-                <h3 class="card__secondary-text">Author Name</h3>
-            </div>
+        <div class="card__description">
+            <p>Visit ten places on our planet that are undergoing the biggest changes today.</p>
         </div>
-
 
         <div class="card__actions">
             <div class="card__buttons">
-                <button class="card__button">READ</button>
-                <button class="card__button">BOOKMARK</button>
+                <button class="card__button button-inherit-parent">READ</button>
+                <button class="card__button button-inherit-parent">BOOKMARK</button>
             </div>
+
+
+            <!-- Inset Icons base on need -->
+            <div class="card__icons">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+            </div>
+
         </div>
     </div>
-    <!-- Card Component with Badge Ends -->
+    <!-- Card Component Ends -- Basic with Text over Media -->
 
+    <h2 class="comp-lib-h2">Card Component Basic with Header</h2>
+    <!-- Card Component Starts -- Basic with Header -->
+    <div class="card card-basic-text-header">
+        <img class="card__img card__img--basic-text-over-media"
+            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
 
-    <h2 class="comp-lib-h2">Card with Dismiss</h2>
-    <!-- Card Component with Dismiss Starts -->
-    <div class="card">
-        <div class="card__content">
-            <img class="card__img" 
-            src="https://media.istockphoto.com/photos/aerial-view-of-misty-mountains-at-sunrise-picture-id1195458582?k=20&m=1195458582&s=612x612&w=0&h=gzpAJTwppTIEAhNbUaHnjuRQoYon0F4C87UQ3xXv1oU="/>
-
-            <div class="card__info">
-                <h2 class="card__primary-text">Mountains Hill Top</h2>
-                <h3 class="card__secondary-text">Author Name</h3>
-            </div>
+        <div class="card__info card__info--basic-text-header">
+            <h2 class="card__primary-text">Mountains Hill Top</h2>
+            <h3 class="card__secondary-text">Author Name</h3>
         </div>
 
+        <div class="card__description">
+            <p>Visit ten places on our planet that are undergoing the biggest changes today.</p>
+        </div>
 
-        <div class="card__actions card__actions--dismiss">
+        <div class="card__actions">
             <div class="card__buttons">
-                <button class="card__button">DISMISS</button>
+                <button class="card__button button-inherit-parent">READ</button>
+                <button class="card__button button-inherit-parent">BOOKMARK</button>
             </div>
+
+
+            <!-- Inset Icons base on need -->
+            <div class="card__icons">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+            </div>
+
         </div>
     </div>
-    <!-- Card Component with Dismiss Ends -->
+    <!-- Card Component Ends -- Basic with Header -->
 
 
-    <h2 class="comp-lib-h2">Card Component with Text Overlay</h2>
-    <!-- Card Component with Text Overlay Starts -->
-    <!-- Card Component with Text Overlay Ends -->
 
+    <h2 class="comp-lib-h2">Card Horizontal Image and Text</h2>
+    <!-- Card Component Starts -- Horizontal Image and Text -->
+    <div class="card card-img-text-side-by-side">
+        <img class="card__img" 
+            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
+
+        <div class="card__info">
+            <h2 class="card__primary-text">Mountains Hill Top</h2>
+            <h3 class="card__secondary-text">Author Name</h3>
+        </div>
+
+        <div class="card__description card__description-none">
+            <p>Some Description</p>
+        </div>
+
+        <div class="card__actions">
+            <div class="card__buttons">
+                <button class="card__button button-inherit-parent">READ</button>
+                <button class="card__button button-inherit-parent">BOOKMARK</button>
+            </div>
+
+
+            <!-- Inset Icons base on need -->
+            <div class="card__icons">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+            </div>
+
+        </div>
+    </div>
+    <!-- Card Component Ends -- Horizontal Image and Text -->
 
     <!-- Card Component Ends -->
     <hr class="comp-lib-hr">
 
 
 
-
-
-    <!-- Card Component with Text Overlay Starts -->
-    <h1 class="comp-lib-h1">@ Card Component with Text Overlay</h1>
-
-    <!-- Card Component with Text Overlay Description -->
-    <div class="card-txt-overlay">
-        <img class="card-txt-overlay__img" 
-        src="https://picsum.photos/320/160"/>
-
-        <div class="card-txt-overlay__content">
-            <div class="card-txt-overlay__info">
-                <h2 class="card-txt-overlay__primary-text">Mountains Hill Top</h2>
-                <h3 class="card-txt-overlay__secondary-text">Author Name</h3>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Card Component with Text Overlay Ends -->
-    <hr class="comp-lib-hr">
-
-
-
-    <!-- Card Component with Text Starts -->
-    <h1 class="comp-lib-h1">@ Card Component with Text</h1>
-
-    <!-- Card Component with Text Description -->
-    <div class="card-txt">
-
-        <div class="card-txt__content">
-            <div class="card-txt__info">
-                <h2 class="card-txt__primary-text">Mountains Hill Top</h2>
-                <h3 class="card-txt__secondary-text">Author Name</h3>
-            </div>
-        </div>
-    </div>
-    <!-- Card Component with Text Ends -->
-    <hr class="comp-lib-hr">
-
     
-
-
     <!-- Chip Component Starts -->
     <h1 class="comp-lib-h1">@ Chip Component</h1>
 
@@ -508,145 +511,6 @@
     <hr class="comp-lib-hr">
 
 
-    <!-- Card Component Starts -->
-    <h1 class="comp-lib-h1">@ Card Component</h1>
-
-    <!-- Card Component Description -->
-
-    <h2 class="comp-lib-h2">Card Component Basic</h2>
-    <!-- Card Component Starts -- Basic -->
-    <div class="card card-basic">
-        <img class="card__img card__img--basic"
-            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
-
-        <div class="card__info">
-            <h2 class="card__primary-text">Mountains Hill Top</h2>
-            <h3 class="card__secondary-text">Author Name</h3>
-        </div>
-
-        <div class="card__description">
-            <p>Visit ten places on our planet that are undergoing the biggest changes today.</p>
-        </div>
-
-        <div class="card__actions">
-            <div class="card__buttons">
-                <button class="card__button button-inherit-parent">READ</button>
-                <button class="card__button button-inherit-parent">BOOKMARK</button>
-            </div>
-
-
-            <!-- Inset Icons base on need -->
-            <div class="card__icons">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-            </div>
-
-        </div>
-    </div>
-    <!-- Card Component Ends -- Basic -->
-
-
-    <h2 class="comp-lib-h2">Card Component Basic with Text over Media</h2>
-    <!-- Card Component Starts -- Basic with Text over Media -->
-    <div class="card card-basic-text-over-media">
-        <img class="card__img card__img--basic-text-over-media"
-            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
-
-        <div class="card__info card__info--basic-text-over-media">
-            <h2 class="card__primary-text">Mountains Hill Top</h2>
-            <h3 class="card__secondary-text">Author Name</h3>
-        </div>
-
-        <div class="card__description">
-            <p>Visit ten places on our planet that are undergoing the biggest changes today.</p>
-        </div>
-
-        <div class="card__actions">
-            <div class="card__buttons">
-                <button class="card__button button-inherit-parent">READ</button>
-                <button class="card__button button-inherit-parent">BOOKMARK</button>
-            </div>
-
-
-            <!-- Inset Icons base on need -->
-            <div class="card__icons">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-            </div>
-
-        </div>
-    </div>
-    <!-- Card Component Ends -- Basic with Text over Media -->
-
-    <h2 class="comp-lib-h2">Card Component Basic with Header</h2>
-    <!-- Card Component Starts -- Basic with Header -->
-    <div class="card card-basic-text-header">
-        <img class="card__img card__img--basic-text-over-media"
-            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
-
-        <div class="card__info card__info--basic-text-header">
-            <h2 class="card__primary-text">Mountains Hill Top</h2>
-            <h3 class="card__secondary-text">Author Name</h3>
-        </div>
-
-        <div class="card__description">
-            <p>Visit ten places on our planet that are undergoing the biggest changes today.</p>
-        </div>
-
-        <div class="card__actions">
-            <div class="card__buttons">
-                <button class="card__button button-inherit-parent">READ</button>
-                <button class="card__button button-inherit-parent">BOOKMARK</button>
-            </div>
-
-
-            <!-- Inset Icons base on need -->
-            <div class="card__icons">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-            </div>
-
-        </div>
-    </div>
-    <!-- Card Component Ends -- Basic with Header -->
-
-
-
-    <h2 class="comp-lib-h2">Card Horizontal Image and Text</h2>
-    <!-- Card Component Starts -- Horizontal Image and Text -->
-    <div class="card card-img-text-side-by-side">
-        <img class="card__img" 
-            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
-
-        <div class="card__info">
-            <h2 class="card__primary-text">Mountains Hill Top</h2>
-            <h3 class="card__secondary-text">Author Name</h3>
-        </div>
-
-        <div class="card__description card__description-none">
-            <p>Some Description</p>
-        </div>
-
-        <div class="card__actions">
-            <div class="card__buttons">
-                <button class="card__button button-inherit-parent">READ</button>
-                <button class="card__button button-inherit-parent">BOOKMARK</button>
-            </div>
-
-
-            <!-- Inset Icons base on need -->
-            <div class="card__icons">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
-            </div>
-
-        </div>
-    </div>
-    <!-- Card Component Ends -- Horizontal Image and Text -->
 
 
 </body>

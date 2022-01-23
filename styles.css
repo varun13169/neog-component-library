@@ -165,7 +165,7 @@ body{
 
 
 /*  Card Component Starts */
-.card{
+/* .card{
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -224,22 +224,22 @@ body{
 
 .card__icons {
     margin-left: auto;
-}
+} */
 
     /* Card with Badge Starts */
-    .card .badge {
+    /* .card .badge {
         position: absolute;
         top: -1rem;
         right: -1rem;
-    }
+    } */
     /* Card with Badge Ends */
 
 
     /* Card with Dismiss Starts */
-    .card__actions--dismiss {
+    /* .card__actions--dismiss {
         margin-left: auto;
 
-    }
+    } */
     /* Card with Dismiss Ends */
 
 /*  Card Component Ends */
@@ -465,8 +465,10 @@ body{
 
     display: flex;
 }
-.header__navigation {
-    display: flex;
+
+.header__title {
+    margin-top: auto;
+
 }
 
 
@@ -476,21 +478,24 @@ body{
 }
 
 .header__btn-download {
-    width: 1rem;
-    height: 1rem;
-    background: url("/flaticons/mail.png");
+    width: 4rem;
+    height: auto;
+    margin: 0rem 1rem 0rem 1rem;
+    background: var(--black);
 }
 
 .header__btn-print {
-    width: 1rem;
-    height: 1rem;
-    background: url("/flaticons/mail.png");
+    width: 4rem;
+    height: auto;
+    margin: 0rem 1rem 0rem 1rem;
+    background: var(--black);
 }
 
 .header__btn-save {
     width: 4rem;
-    height: 4rem;
-    background: url("/flaticons/chat-white.png");
+    height: auto;
+    margin: 0rem 1rem 0rem 1rem;
+    background: var(--black);
 }
 
 /*  Header Component Ends */
@@ -705,21 +710,182 @@ body{
     margin-right: auto;
 }
 
-/*  Tabs Component Starts -- with Text*/
+/*  Tabs Component Starts -- with Text */
 .tab-bar__icon--none {
     display: none;
 }
-/*  Tabs Component Ends -- with Text*/
+/*  Tabs Component Ends -- with Text */
 
-/*  Tabs Component Starts -- with Text and Icon side-by-side*/
+/*  Tabs Component Starts -- with Text and Icon side-by-side */
 .tab-bar__icon--none {
 }
-/*  Tabs Component Ends -- with Text and Icon side-by-side*/
+/*  Tabs Component Ends -- with Text and Icon side-by-side */
 
-/*  Tabs Component Starts -- with Text and Icon Stacked*/
+/*  Tabs Component Starts -- with Text and Icon Stacked */
 .tab-bar__tab--icon-text-stacked {
     flex-direction: column;
 }
-/*  Tabs Component Ends -- with Text and Icon Stacked*/
+/*  Tabs Component Ends -- with Text and Icon Stacked */
 
 /*  Tabs Component Ends */
+
+
+
+
+
+
+/*  Card Component Starts */
+.card{
+    display: grid;
+    width: 20rem;
+    height: auto;
+    background: var(--white);
+    border-radius: 0.25rem;
+    overflow: hidden;
+
+}
+
+.card__img {
+    grid-area: cardImg;
+    width: 6rem;
+    height: 6rem;
+}
+
+.card__info {
+    grid-area: cardInfo;
+}
+
+.card__actions {
+    grid-area: cardActions;
+}
+
+.card__info {
+    padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+}
+.card__primary-text{
+    font-size: 1.25rem;
+    color: var(--black);
+}
+.card__secondary-text{
+    color: var(--grey-secondary);
+}
+
+.card__description {
+    grid-area: cardDesc;
+    padding: 0.25rem;
+    color: var(--grey-secondary);
+    /* display: none; */
+}
+
+.card__actions {
+    display: flex;
+
+    min-height: 2rem;
+    padding: 0.5rem;
+    align-items: center;
+
+}
+
+.card__button {
+    color: var(--primary-color);
+    padding: 0.5rem;
+}
+
+.card__icons {
+    margin-left: auto;
+}
+.card__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+/*  Card Component Starts -- Basic */
+.card-basic {
+    grid-template-areas: 'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+.card__img--basic {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/*  Card Component Ends -- Basic */
+
+/*  Card Component Starts -- Basic with Text over Media */
+.card-basic-text-over-media {
+    grid-template-areas: 'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+.card__img--basic-text-over-media {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.card__info--basic-text-over-media {
+    grid-area: cardImg-start / cardImg-start / cardImg-end / cardImg-end;
+    margin-top: auto;
+}
+/*  Card Component Ends -- Basic with Text over Media */
+
+
+/*  Card Component Starts -- Basic with Header */
+.card-basic-text-header {
+    grid-template-areas: 'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+.card__img--basic-text-over-media {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.card__info--basic-text-header {
+    grid-area: cardInfo;
+    margin-top: auto;
+}
+
+/*  Card Component Ends -- Basic with Header */
+
+
+
+/*  Card Component Starts -- Horizontal Image and Text */
+.card-img-text-side-by-side {
+    grid-template-areas: 'cardImg     cardImg     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardImg     cardImg     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardImg     cardImg     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+
+.card__description-none {
+    display: none;
+}
+/*  Card Component Ends -- Horizontal Image and Text */
+
+
+
+
+    /* Card with Badge Starts */
+    /* .card .badge {
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+    } */
+    /* Card with Badge Ends */
+
+
+    /* Card with Dismiss Starts */
+    /* .card__actions--dismiss {
+        margin-left: auto;
+
+    } */
+    /* Card with Dismiss Ends */
+
+/*  Card Component Ends */

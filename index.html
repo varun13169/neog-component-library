@@ -310,20 +310,26 @@
     <!-- Header Component Regular -->
     <div class="header">
 
-        <section  class="header__navigation">
-            <div class="header__button">
-                www
-            </div>
-            <span class="header__title">
+        <!-- <section  class="header__navigation"> -->
+            <button class="header__btn-download button-inherit-parent">
+                <img class="tab-bar__icon" src="/flaticons/mail.png" alt="Image">
+            </button>
+            <h3 class="header__title">
                 Just Do it
-            </span>
-        </section>
+            </h3>
+        <!-- </section> -->
 
-        <section class="header__action">
-            <!-- <button class="header__btn-download">HHH</button>
-            <button class="header__btn-print"></button>
-            <button class="header__btn-save"></button> -->
-        </section>
+        <div class="header__action">
+            <button class="header__btn-download button-inherit-parent">
+                <img class="tab-bar__icon" src="/flaticons/mail.png" alt="Image">
+            </button>
+            <button class="header__btn-print button-inherit-parent">
+                <img class="tab-bar__icon" src="/flaticons/mail.png" alt="Image">
+            </button>
+            <button class="header__btn-save button-inherit-parent">
+                <img class="tab-bar__icon" src="/flaticons/mail.png" alt="Image">
+            </button>
+        </div>
     </div>
 
 
@@ -501,6 +507,146 @@
     <!-- Tabs Component Ends -->
     <hr class="comp-lib-hr">
 
+
+    <!-- Card Component Starts -->
+    <h1 class="comp-lib-h1">@ Card Component</h1>
+
+    <!-- Card Component Description -->
+
+    <h2 class="comp-lib-h2">Card Component Basic</h2>
+    <!-- Card Component Starts -- Basic -->
+    <div class="card card-basic">
+        <img class="card__img card__img--basic"
+            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
+
+        <div class="card__info">
+            <h2 class="card__primary-text">Mountains Hill Top</h2>
+            <h3 class="card__secondary-text">Author Name</h3>
+        </div>
+
+        <div class="card__description">
+            <p>Visit ten places on our planet that are undergoing the biggest changes today.</p>
+        </div>
+
+        <div class="card__actions">
+            <div class="card__buttons">
+                <button class="card__button button-inherit-parent">READ</button>
+                <button class="card__button button-inherit-parent">BOOKMARK</button>
+            </div>
+
+
+            <!-- Inset Icons base on need -->
+            <div class="card__icons">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+            </div>
+
+        </div>
+    </div>
+    <!-- Card Component Ends -- Basic -->
+
+
+    <h2 class="comp-lib-h2">Card Component Basic with Text over Media</h2>
+    <!-- Card Component Starts -- Basic with Text over Media -->
+    <div class="card card-basic-text-over-media">
+        <img class="card__img card__img--basic-text-over-media"
+            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
+
+        <div class="card__info card__info--basic-text-over-media">
+            <h2 class="card__primary-text">Mountains Hill Top</h2>
+            <h3 class="card__secondary-text">Author Name</h3>
+        </div>
+
+        <div class="card__description">
+            <p>Visit ten places on our planet that are undergoing the biggest changes today.</p>
+        </div>
+
+        <div class="card__actions">
+            <div class="card__buttons">
+                <button class="card__button button-inherit-parent">READ</button>
+                <button class="card__button button-inherit-parent">BOOKMARK</button>
+            </div>
+
+
+            <!-- Inset Icons base on need -->
+            <div class="card__icons">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+            </div>
+
+        </div>
+    </div>
+    <!-- Card Component Ends -- Basic with Text over Media -->
+
+    <h2 class="comp-lib-h2">Card Component Basic with Header</h2>
+    <!-- Card Component Starts -- Basic with Header -->
+    <div class="card card-basic-text-header">
+        <img class="card__img card__img--basic-text-over-media"
+            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
+
+        <div class="card__info card__info--basic-text-header">
+            <h2 class="card__primary-text">Mountains Hill Top</h2>
+            <h3 class="card__secondary-text">Author Name</h3>
+        </div>
+
+        <div class="card__description">
+            <p>Visit ten places on our planet that are undergoing the biggest changes today.</p>
+        </div>
+
+        <div class="card__actions">
+            <div class="card__buttons">
+                <button class="card__button button-inherit-parent">READ</button>
+                <button class="card__button button-inherit-parent">BOOKMARK</button>
+            </div>
+
+
+            <!-- Inset Icons base on need -->
+            <div class="card__icons">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+            </div>
+
+        </div>
+    </div>
+    <!-- Card Component Ends -- Basic with Header -->
+
+
+
+    <h2 class="comp-lib-h2">Card Horizontal Image and Text</h2>
+    <!-- Card Component Starts -- Horizontal Image and Text -->
+    <div class="card card-img-text-side-by-side">
+        <img class="card__img" 
+            src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg"/>
+
+        <div class="card__info">
+            <h2 class="card__primary-text">Mountains Hill Top</h2>
+            <h3 class="card__secondary-text">Author Name</h3>
+        </div>
+
+        <div class="card__description card__description-none">
+            <p>Some Description</p>
+        </div>
+
+        <div class="card__actions">
+            <div class="card__buttons">
+                <button class="card__button button-inherit-parent">READ</button>
+                <button class="card__button button-inherit-parent">BOOKMARK</button>
+            </div>
+
+
+            <!-- Inset Icons base on need -->
+            <div class="card__icons">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+                <img class="card__icon" src="/flaticons/mail.png" alt="Image">
+            </div>
+
+        </div>
+    </div>
+    <!-- Card Component Ends -- Horizontal Image and Text -->
 
 
 </body>

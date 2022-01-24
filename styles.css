@@ -20,7 +20,7 @@
 }
 
 body{
-    background: #AAAAAA;
+    background: var(--grey-subtle);
     padding: 2rem;
     font-family: 'Open Sans', sans-serif;
 }
@@ -286,6 +286,51 @@ body{
 /*  Card Component Ends -- Basic with Header */
 
 
+/*  Card Component Starts -- Basic only buttons */
+.card-basic-only-buttons {
+    grid-template-areas: 'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+.card__img--basic-only-buttons {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card__icons-only-buttons {
+    display: none;
+
+}
+/*  Card Component Ends -- Basic  only buttons */
+
+
+/*  Card Component Starts -- Basic only Icons */
+.card-basic-only-icons {
+    grid-template-areas: 'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardImg     cardImg     cardImg    cardImg    cardImg    cardImg'
+                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardInfo     cardInfo     cardInfo    cardInfo    cardInfo    cardInfo'
+                         'cardDesc     cardDesc     cardDesc    cardDesc    cardDesc    cardDesc'
+                         'cardActions cardActions cardActions cardActions cardActions cardActions';
+}
+.card__img--basic-only-icons {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card__buttons--basic-only-icons {
+    display: none;
+
+}
+/*  Card Component Ends -- Basic  only button */
+
 
 /*  Card Component Starts -- Horizontal Image and Text */
 .card-img-text-side-by-side {
@@ -299,6 +344,8 @@ body{
     display: none;
 }
 /*  Card Component Ends -- Horizontal Image and Text */
+
+
 /*  Card Component Ends */
 
 

@@ -1,0 +1,115 @@
+/*  Dialogue Component Starts */
+
+.dialogue {
+    width: 20rem;
+    height: 15rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 1px 0px 0px rgba(var(--rgba-box-shadow));
+    background-color: var(--white);
+    
+    display: grid;
+    grid-template-columns: "1fr 1fr 1fr";
+
+}
+
+.dialogue__title {
+    grid-area: title;
+    /* background-color: red; */
+    padding: 1rem;
+    height: 2rem;
+}
+
+.dialogue__supporting-text {
+    grid-area: supportingText;
+    padding: 1rem;
+    color: var(--description-text);
+
+}
+
+.dialogue__action-btn {
+    width: auto;
+    border-radius: 8px;
+    margin: 6px;
+    color: var(--primary-color);
+    text-align: center;
+}
+.dialogue__action-btn:hover {
+    background-color:rgba(var(--rgba-primary-color-hover));
+}
+
+.dialogue__action-btn__primary {
+    grid-area: actionBtnPrimary;
+}
+
+.dialogue__action-btn__secondary {
+    grid-area: actionBtnSecondary;
+}
+
+/*  Dialogue Component Starts -- with Title with Buttons Side-By-Side  */
+.dialogue--title-buttons-side-by-side {
+    grid-template-areas: 'title          title            title'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         '.....          actionBtnPrimary actionBtnSecondary';
+}
+/*  Dialogue Component Ends -- with Buttons Stacked with Buttons Side-By-Side  */
+
+
+/*  Dialogue Component Starts -- with Title with Buttons Stacked */
+.dialogue--buttons-stacked {
+    grid-template-areas: 'title          title            title'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         '.....          .....            actionBtnPrimary'
+                         '.....          .....            actionBtnSecondary';
+
+}
+
+.dialogue__action-btn--stacked {
+    text-align: left;
+    padding-left: 1rem;
+}
+/*  Dialogue Component Ends -- with Title with Buttons Stacked */
+
+
+/*  Dialogue Component Starts -- without Title with Buttons Side-By-Side */
+.dialogue--no-title-buttons-side-by-side {
+    grid-template-areas: 'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         '.....          actionBtnPrimary actionBtnSecondary';
+}
+
+.dialogue__title--none {
+    display: none;
+}
+/*  Dialogue Component Ends -- with Buttons Stacked with Buttons Side-By-Side */
+
+
+/*  Dialogue Component Starts -- without Title with Buttons Stacked */
+.dialogue--no-title-buttons-stacked {
+    grid-template-areas: 'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         'supportingText supportingText   supportingText'
+                         '.....          .....            actionBtnPrimary'
+                         '.....          .....            actionBtnSecondary';
+}
+
+.dialogue__title--none {
+    display: none;
+}
+
+.dialogue__action-btn--stacked {
+    text-align: left;
+    padding-left: 1rem;
+}
+/*  Dialogue Component Ends -- with Buttons Stacked with Buttons Stacked */
+
+
+/*  Dialogue Component Ends */

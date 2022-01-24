@@ -1,0 +1,60 @@
+/*  Tabs Component Starts */
+
+.tab-bar {
+    display: inline-flex;
+    background: var(--white);
+    height: auto;
+}
+
+.tab-bar__tab {
+    width: 10rem;
+    height: auto;
+    min-height: 3rem;
+
+    border-bottom: 3px solid var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tab-bar__tab:hover {
+    background: rgba(var(--rgba-primary-color-hover));
+}
+.tab-bar__tab--focus {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.tab-bar__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-bar__title {
+    width: auto;
+    height: auto;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*  Tabs Component Starts -- with Text */
+.tab-bar__icon--none {
+    display: none;
+}
+/*  Tabs Component Ends -- with Text */
+
+/*  Tabs Component Starts -- with Text and Icon side-by-side */
+.tab-bar__icon--none {
+}
+/*  Tabs Component Ends -- with Text and Icon side-by-side */
+
+/*  Tabs Component Starts -- with Text and Icon Stacked */
+.tab-bar__tab--icon-text-stacked {
+    flex-direction: column;
+}
+/*  Tabs Component Ends -- with Text and Icon Stacked */
+
+/*  Tabs Component Ends */

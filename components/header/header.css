@@ -1,0 +1,110 @@
+/*  Header Component Starts */
+.header {
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    display: flex;
+}
+
+.header__title {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: var(--white);    
+}
+
+.header__action {
+    display: flex;
+    margin-left: auto;
+}
+
+.header__btn {
+    font-size: 100%;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin: auto 0.5rem;
+}
+
+.header__btn:hover {
+    background: rgba(var(--rgba-light-theme-hover));
+}
+
+.header__btn--download {
+}
+
+.header__btn--print {
+}
+
+.header__btn--save {
+}
+
+.header__icon {
+    font-size: 80%;
+    width: 3em;
+    height: 3em;
+}
+
+/*  Header Component Starts -- Standard */
+.header--standard {
+    height: 4rem;
+}
+/*  Header Component Ends -- Standard */
+
+
+/*  Header Component Starts -- Short */
+.header--short {
+    height: 3rem;
+}
+
+.header__btn--short {
+    font-size: 75%;
+}
+/*  Header Component Ends -- Short */
+
+/*  Header Component Starts -- Short */
+.header--short {
+    height: 3rem;
+}
+
+.header__btn {
+    font-size: 75%;
+}
+/*  Header Component Ends -- Short */
+
+
+/*  Header Component Starts -- Prominent */
+.header--prominent {
+    height: 8rem;
+    align-items: flex-start;
+}
+
+.header__btn--prominent {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.header__title--prominent {
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+/*  Header Component Ends -- Prominent */
+
+/*  Header Component Starts -- Prominent Dense */
+.header--prominent-dense {
+    height: 7rem;
+    align-items: flex-start;
+}
+
+.header__btn--prominent-dense {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.header__title--prominent-dense {
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+/*  Header Component Ends -- Prominent  Dense */
+
+
+/*  Header Component Ends */

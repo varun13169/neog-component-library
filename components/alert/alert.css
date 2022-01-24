@@ -1,0 +1,115 @@
+/*  Alert Component Starts */
+/* .alert {
+    position: relative;
+    height: 5rem;
+}
+.alert__bg-primary {
+    background-color: var(--primary-color);
+    opacity: 0.5;
+}
+.alert__bg-dark {
+    background-color: var(--grey-subtle);
+    opacity: 0.5;
+}
+.alert__content{
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: var(--white);
+
+    display: flex;
+}
+
+.alert__icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--primary-color);
+}
+
+.alert__text {
+    flex-grow: 1;
+    padding: 0rem 1rem;
+}
+
+.alert__title {
+    color: var(--primary-color);
+}
+.alert__description {
+    color: var(--primary-color);
+}
+
+
+.alert--position-start {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 30rem;
+    height: 5rem;
+    border-radius: 0.25rem;
+} */
+/*  Avatar Component Ends */
+
+
+.alert {
+    display: flex;
+    width: 30rem;
+    height: 5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(var(--rgba-alert-success-light-background-color));
+}
+
+.alert__icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.alert__content {
+    padding: 0rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.alert__text {
+    color: var(--alert-success-light-font-color);
+}
+
+/* Alert Component Starts -- Success */
+.alert--success {
+    background: rgba(var(--rgba-alert-success-light-background-color));
+}
+
+.alert__text--success {
+    color: var(--alert-success-light-font-color);
+}
+/* Alert Component Ends -- Success */
+
+/* Alert Component Starts -- Error */
+.alert--error {
+    background: rgba(var(--rgba-alert-error-light-background-color));
+}
+
+.alert__text--error {
+    color: var(--alert-error-light-font-color);
+}
+/* Alert Component Ends -- Error */
+
+
+/* Alert Component Starts -- Warning */
+.alert--warning {
+    background: rgba(var(--rgba-alert-warning-light-background-color));
+}
+
+.alert__text--warning {
+    color: var(--alert-warning-light-font-color);
+}
+/* Alert Component Ends -- Warning */
+
+
+/* Alert Component Starts -- Info */
+.alert--info {
+    background: rgba(var(--rgba-alert-info-light-background-color));
+}
+
+.alert__text--info {
+    color: var(--alert-info-light-font-color);
+}
+/* Alert Component Ends -- Info */

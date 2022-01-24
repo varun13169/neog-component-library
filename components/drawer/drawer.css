@@ -1,0 +1,50 @@
+/*  Drawer Component Starts */
+.drawer {
+    width: 15rem;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.drawer__heading {
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.drawer__title {
+
+}
+
+.drawer__subtitle {
+    color: var(--grey-secondary);
+}
+
+.drawer__content-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer__content {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+.drawer__content--focus {
+    background-color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.drawer__icon {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+}
+
+.drawer__icon-description {
+    display: inline-block;
+    color: var(--grey-secondary);
+    margin-left: 2rem;
+
+}
+/*  Drawer Component Ends */
+

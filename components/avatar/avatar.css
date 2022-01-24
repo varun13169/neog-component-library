@@ -1,0 +1,33 @@
+/*  Avatar Component Starts */
+.avatar{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.avatar__content {
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+}
+/* Avatar Component with Badge */
+.avatar .badge {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.avatar .badge__content {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+/*  Avatar Component Ends */

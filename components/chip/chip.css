@@ -1,0 +1,60 @@
+/*  Chip Component with Flex */
+.chip-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    height: 15rem;
+    background: var(--grey-subtle);
+    position: relative;
+
+    border-radius: 0.25rem;
+    box-shadow: 2px 2px 2px 1px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.chip-holder__chip {
+    min-width: 10rem;
+    min-height: 3rem;
+    padding: 1rem;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    background: var(--primary-color);
+    border-radius: 50px;
+    color: var(--white);
+    text-align: center;
+}
+/*  Chip Component Ends with Flex */
+
+
+
+/*  Chip Component with Grid */
+.chip-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    height: 15rem;
+    background: var(--grey-subtle);
+    position: relative;
+
+    border-radius: 0.25rem;
+    box-shadow: 2px 2px 2px 1px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.chip-holder__chip {
+    min-width: 10rem;
+    min-height: 3rem;
+    padding: 1rem;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    background: var(--primary-color);
+    border-radius: 50px;
+    color: var(--white);
+    text-align: center;
+}
+
+@media only screen and (max-width: 1212px) {
+    .chip-holder {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+/*  Chip Component Ends with Grid */

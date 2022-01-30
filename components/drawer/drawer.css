@@ -24,14 +24,15 @@
 }
 
 .drawer__content {
-    height: 2rem;
+    /* height: 2rem; */
     display: flex;
     align-items: center;
     margin-bottom: 0.25rem;
+    padding: 0.5rem;
 }
 .drawer__content--focus {
-    background-color: var(--primary-color);
-    opacity: 0.5;
+    background-color: rgba(var(--rgba-primary-color-hover));
+    color: var(--primary-color);
 }
 
 .drawer__icon {
@@ -44,6 +45,8 @@
     display: inline-block;
     color: var(--grey-secondary);
     margin-left: 2rem;
+
+    color: var(--primary-color);
 
 }
 /*  Drawer Component Ends */
